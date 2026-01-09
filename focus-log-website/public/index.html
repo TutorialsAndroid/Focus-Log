@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Log – Calm Productivity</title>
+
+    <!-- Primary SEO -->
+    <meta
+      name="description"
+      content="Focus Log is a clean, privacy-first focus timer app that helps you track deep work and build better habits. No ads. No accounts."
+    />
+    <meta
+      name="keywords"
+      content="focus timer, productivity app, deep work, time tracking, focus log"
+    />
+    <meta name="author" content="Focus Log" />
+
+    <!-- Open Graph (Social / Play Store previews) -->
+    <meta property="og:title" content="Focus Log – Calm Productivity" />
+    <meta
+      property="og:description"
+      content="A clean, distraction-free focus timer for deep work. Privacy-first and offline."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://focuslog-mobile.web.app" />
+    <meta property="og:image" content="https://focuslog-mobile.web.app/images/focuslog-og-image.png" />
+
+    <!-- Mobile & Theme -->
+    <meta name="theme-color" content="#3A4F7A" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f6f7fb;
+        color: #111;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 48px 20px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+
+      nav a {
+        margin-left: 24px;
+        text-decoration: none;
+        color: #3a4f7a;
+        font-weight: 500;
+      }
+
+      .hero {
+        max-width: 720px;
+        margin-bottom: 100px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        padding: 14px 24px;
+        border-radius: 14px;
+        text-decoration: none;
+        margin-right: 12px;
+        display: inline-block;
+      }
+
+      .primary {
+        background: #3a4f7a;
+        color: white;
+      }
+
+      .secondary {
+        border: 1px solid #ddd;
+        color: #3a4f7a;
+      }
+
+      footer {
+        border-top: 1px solid #e5e5e5;
+        padding: 32px 0;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+      }
+
+      footer a {
+        margin: 0 12px;
+        color: #3a4f7a;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Focus Log</h2>
+        <nav>
+          <a href="/focuslog-privacy-policy">Privacy</a>
+          <a href="/focuslog-terms-and-conditions">Terms</a>
+          <a href="mailto:heaticdeveloper@gmail.com">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>Focus better.<br />Track less.</h1>
+        <p>
+          Focus Log is a clean, distraction-free focus timer that helps you
+          track deep work and build better habits — without ads, accounts, or
+          noise.
+        </p>
+        <a
+          class="btn primary"
+          href="https://play.google.com/store/apps/details?id=com.app.focuslog"
+          >Get it on Google Play</a
+        >
+        <a class="btn secondary" href="/focuslog-privacy-policy">Privacy Policy</a>
+      </section>
+
+      <footer>
+        Copyright © <span id="year"></span> Focus Log <br /><br />
+        <a href="/focuslog-privacy-policy">Privacy Policy</a>
+        <a href="/focuslog-terms-and-conditions">Terms & Conditions</a>
+        <a href="mailto:heaticdeveloper@gmail.com">Contact</a>
+      </footer>
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </body>
+</html>
