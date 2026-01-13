@@ -14,6 +14,7 @@ class _SessionTimerState extends State<SessionTimer> {
   final controller = TextEditingController();
   Timer? _timer;
   Duration _elapsed = Duration.zero;
+  DateTime? _currentStart;
 
   @override
   void dispose() {
@@ -24,9 +25,11 @@ class _SessionTimerState extends State<SessionTimer> {
 
   void _startTicker(DateTime start) {
     _timer?.cancel();
+    _currentStart = start;
     _elapsed = DateTime.now().difference(start);
 
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted) return;
       setState(() {
         _elapsed = DateTime.now().difference(start);
       });
@@ -35,6 +38,8 @@ class _SessionTimerState extends State<SessionTimer> {
 
   void _stopTicker() {
     _timer?.cancel();
+    _timer = null;
+    _currentStart = null;
     _elapsed = Duration.zero;
   }
 
@@ -45,11 +50,12 @@ class _SessionTimerState extends State<SessionTimer> {
 
     // Start/stop timer based on session state
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (active != null && _timer == null) {
-        _startTicker(active.start);
-      }
-      if (active == null && _timer != null) {
-        _stopTicker();
+      if (active != null) {
+        if (_currentStart != active.start) {
+          _startTicker(active.start);
+        }
+      } else {
+        if (_timer != null) _stopTicker();
       }
     });
 
