@@ -16,7 +16,7 @@ class FocusLogApp extends StatelessWidget {
       create: (_) => FocusProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'FocusLog',
+        title: 'Focus Log',
         themeMode: ThemeMode.system,
         theme: _lightTheme(),
         darkTheme: _darkTheme(),
